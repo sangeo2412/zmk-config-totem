@@ -129,7 +129,7 @@
             bindings = <
        &kp LSHFT  &kp Q  &kp W   &kp E   &kp R     &trans  &kp PAGE_DOWN  &kp UP    &kp PG_UP  &trans
        &kp LCTRL  &kp A  &kp S   &kp D   &kp F     &trans  &kp LEFT       &kp DOWN  &kp RIGHT  &trans
-&mo 0  &kp TAB    &kp Z  &kp X   &kp C   &kp V     &trans  &trans         &trans    &trans     &trans  &trans
+&to 0  &kp TAB    &kp Z  &kp X   &kp C   &kp V     &trans  &trans         &trans    &trans     &trans  &trans
                          &trans  &trans  &trans    &trans  &trans         &trans
             >;
         };
