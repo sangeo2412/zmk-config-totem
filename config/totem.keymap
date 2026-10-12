@@ -198,10 +198,10 @@
             label = "BASE";
             display-name = "BASE";
             bindings = <
-       &kp Q       &kp W       &kp E        &kp R        &kp T          &kp Y      &kp U        &kp I        &kp O         &kp P
-       &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G          &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&to 2  &lt 3 Z     &mt RALT X  &kp C        &kp V        &kp B          &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 3 SLASH   &kp LANG1
-                               &lt 6 ESC    &lt 4 TAB    &lt 5 SPACE    &lt 8 RET  &lt 7 BSPC   &lt 9 DEL
+       &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
+       &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
+&to 2  &lt 3 Z     &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 3 SLASH   &kp LANG1
+                               &lt 6 ESC    &lt 4 SPACE  &lt 5 TAB    &lt 8 RET  &lt 7 BSPC   &lt 9 DEL
             >;
         };
 
@@ -209,10 +209,10 @@
             label = "EXTRA";
             display-name = "EXTRA";
             bindings = <
-        &kp Q       &kp W       &kp E        &kp R        &kp T          &kp Y      &kp U        &kp I        &kp O         &kp P
-        &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G          &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&trans  &lt 3 Z     &mt RALT X  &kp C        &kp V        &kp B          &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 3 SLASH   &trans
-                                &lt 6 ESC    &lt 4 TAB    &lt 5 SPACE    &lt 8 RET  &lt 7 BSPC   &lt 9 DEL
+        &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
+        &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
+&trans  &lt 3 Z     &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 3 SLASH   &trans
+                                &lt 6 ESC    &lt 4 SPACE  &lt 5 TAB    &lt 8 RET  &lt 7 BSPC   &lt 9 DEL
             >;
         };
 
@@ -220,10 +220,10 @@
             label = "TAP";
             display-name = "TAP";
             bindings = <
-       &kp Q  &kp W  &kp E    &kp R    &kp T        &kp Y    &kp U     &kp I      &kp O    &kp P
-       &kp A  &kp S  &kp D    &kp F    &kp G        &kp H    &kp J     &kp K      &kp L    &kp SQT
-&to 0  &kp Z  &kp X  &kp C    &kp V    &kp B        &kp N    &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp LANG1
-                     &kp ESC  &kp TAB  &kp SPACE    &kp RET  &kp BSPC  &kp DEL
+       &kp Q  &kp W  &kp E    &kp R      &kp T      &kp Y    &kp U     &kp I      &kp O    &kp P
+       &kp A  &kp S  &kp D    &kp F      &kp G      &kp H    &kp J     &kp K      &kp L    &kp SQT
+&to 0  &kp Z  &kp X  &kp C    &kp V      &kp B      &kp N    &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp LANG1
+                     &kp ESC  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL
             >;
         };
 
@@ -234,7 +234,7 @@
         &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
         &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none        &none      &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &trans
-                              &mkp MB3   &mkp MB2   &mkp MB1     &mkp MB1   &mkp MB2   &mkp MB3
+                              &mkp MB3   &mkp MB1   &mkp MB2     &mkp MB2   &mkp MB1   &mkp MB3
             >;
         };
 
@@ -256,7 +256,7 @@
         &bootloader  &to_tap   &to_extra  &to_base   &none    &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
         &kp LGUI     &kp LALT  &kp LCTRL  &kp LSHFT  &none    &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
 &trans  &none        &kp RALT  &to_sym    &to_mouse  &none    &mkp MB5   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
-                               &none      &none      &none    &mkp MB1   &mkp MB2        &mkp MB3
+                               &none      &none      &none    &mkp MB2   &mkp MB1        &mkp MB3
             >;
         };
 
@@ -297,10 +297,10 @@
             label = "FUN";
             display-name = "FUN";
             bindings = <
-        &kp F12  &kp F7  &kp F8     &kp F9   &kp PSCRN          &none  &to_base   &to_extra  &to_tap   &bootloader
-        &kp F11  &kp F4  &kp F5     &kp F6   &kp SLCK           &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp F10  &kp F1  &kp F2     &kp F3   &kp PAUSE_BREAK    &none  &to_fun    &to_media  &kp RALT  &none        &trans
-                         &kp K_APP  &kp TAB  &kp SPACE          &none  &none      &none
+        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none  &to_base   &to_extra  &to_tap   &bootloader
+        &kp F11  &kp F4  &kp F5     &kp F6     &kp SLCK           &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none  &to_fun    &to_media  &kp RALT  &none        &trans
+                         &kp K_APP  &kp SPACE  &kp TAB            &none  &none      &none
             >;
         };
     };
