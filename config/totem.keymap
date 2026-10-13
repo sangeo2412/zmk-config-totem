@@ -36,8 +36,22 @@
         tap_to_base {
             timeout-ms = <50>;
             key-positions = <20 31>;
-            layers = <2>;
+            layers = <3>;
             bindings = <&to 0>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+            timeout-ms = <50>;
+            layers = <1>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <2 3>;
+            timeout-ms = <50>;
+            layers = <1>;
         };
     };
 
@@ -53,63 +67,63 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 1>;
+            bindings = <&none>, <&to 2>;
         };
 
         to_tap: to_tap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 2>;
+            bindings = <&none>, <&to 3>;
         };
 
         to_button: to_button {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 3>;
+            bindings = <&none>, <&to 4>;
         };
 
         to_nav: to_nav {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 4>;
+            bindings = <&none>, <&to 5>;
         };
 
         to_mouse: to_mouse {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 5>;
+            bindings = <&none>, <&to 6>;
         };
 
         to_media: to_media {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 6>;
+            bindings = <&none>, <&to 7>;
         };
 
         to_num: to_num {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 7>;
+            bindings = <&none>, <&to 8>;
         };
 
         to_sym: to_sym {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 8>;
+            bindings = <&none>, <&to 9>;
         };
 
         to_fun: to_fun {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 9>;
+            bindings = <&none>, <&to 10>;
         };
 
         cw_shift: cw_shift {
@@ -200,9 +214,20 @@
             bindings = <
        &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
        &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&to 2  &lt 3 Z     &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 3 SLASH   &kp LANG1
-                               &lt 6 ESC    &lt 4 SPACE  &lt 5 TAB    &lt 8 RET  &lt 7 BSPC   &lt 9 DEL
+&to 1  &lt 4 Z     &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 4 SLASH   &to 1
+                               &lt 7 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 9 RET  &lt 8 BSPC   &lt 10 DEL
             >;
+        };
+
+        game_layer {
+            bindings = <
+              &kp Q  &kp W  &kp E      &kp R             &kp T    &kp Y   &kp U   &kp I      &kp O    &kp P
+              &kp A  &kp S  &kp D      &kp F             &kp G    &kp H   &kp J   &kp K      &kp L    &kp APOS
+&kp LEFT_ALT  &kp Z  &kp X  &kp C      &kp V             &kp B    &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &to 0
+                            &kp LCTRL  &mt LSHIFT SPACE  &mo 8    &trans  &trans  &trans
+            >;
+
+            label = "GAME";
         };
 
         extra_layer {
@@ -211,8 +236,8 @@
             bindings = <
         &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
         &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&trans  &lt 3 Z     &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 3 SLASH   &trans
-                                &lt 6 ESC    &lt 4 SPACE  &lt 5 TAB    &lt 8 RET  &lt 7 BSPC   &lt 9 DEL
+&trans  &lt 4 Z     &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 4 SLASH   &trans
+                                &lt 7 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 9 RET  &lt 8 BSPC   &lt 10 DEL
             >;
         };
 
@@ -220,10 +245,10 @@
             label = "TAP";
             display-name = "TAP";
             bindings = <
-       &kp Q  &kp W  &kp E    &kp R      &kp T      &kp Y    &kp U     &kp I      &kp O    &kp P
-       &kp A  &kp S  &kp D    &kp F      &kp G      &kp H    &kp J     &kp K      &kp L    &kp SQT
-&to 0  &kp Z  &kp X  &kp C    &kp V      &kp B      &kp N    &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp LANG1
-                     &kp ESC  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL
+        &kp Q  &kp W  &kp E    &kp R      &kp T      &kp Y    &kp U     &kp I      &kp O    &kp P
+        &kp A  &kp S  &kp D    &kp F      &kp G      &kp H    &kp J     &kp K      &kp L    &kp SQT
+&trans  &kp Z  &kp X  &kp C    &kp V      &kp B      &kp N    &kp M     &kp COMMA  &kp DOT  &kp SLASH  &trans
+                      &kp ESC  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL
             >;
         };
 
