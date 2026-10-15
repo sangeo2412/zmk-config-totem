@@ -33,10 +33,10 @@
 
         // TAP has no layer holds; press both outer pinkie keys to return.
 
-        tap_to_base {
+        to_base {
             timeout-ms = <50>;
-            key-positions = <20 31>;
-            layers = <3>;
+            key-positions = <20 21>;
+            layers = <1>;
             bindings = <&to 0>;
         };
 
@@ -52,6 +52,12 @@
             key-positions = <2 3>;
             timeout-ms = <50>;
             layers = <1>;
+        };
+
+        to_game {
+            bindings = <&to 1>;
+            key-positions = <20 21>;
+            layers = <0>;
         };
     };
 
@@ -212,19 +218,19 @@
             label = "BASE";
             display-name = "BASE";
             bindings = <
-       &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
-       &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&to 1  &lt 4 Z     &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 4 SLASH   &to 1
-                               &lt 7 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 9 RET  &lt 8 BSPC   &lt 10 DEL
+            &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
+            &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
+&kp LSHIFT  &lt 4 Z     &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 4 SLASH   &kp RSHIFT
+                                    &lt 7 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 9 RET  &lt 8 BSPC   &lt 10 DEL
             >;
         };
 
         game_layer {
             bindings = <
-              &kp Q  &kp W  &kp E      &kp R             &kp T    &kp Y   &kp U   &kp I      &kp O    &kp P
-              &kp A  &kp S  &kp D      &kp F             &kp G    &kp H   &kp J   &kp K      &kp L    &kp APOS
-&kp LEFT_ALT  &kp Z  &kp X  &kp C      &kp V             &kp B    &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &to 0
-                            &kp LCTRL  &mt LSHIFT SPACE  &mo 8    &trans  &trans  &trans
+            &kp Q  &kp W  &kp E      &kp R      &kp T    &kp Y    &kp U                   &kp I      &kp O     &kp P
+            &kp A  &kp S  &kp D      &kp F      &kp G    &kp H    &kp J                   &kp K      &kp L     &kp UP
+&kp LSHIFT  &kp Z  &kp X  &kp C      &kp V      &kp B    &kp N    &kp M                   &kp COMMA  &kp LEFT  &kp DOWN  &kp RIGHT
+                          &kp LCTRL  &kp SPACE  &mo 8    &kp RET  &mt LEFT_ALT BACKSPACE  &mo 10
             >;
 
             label = "GAME";
@@ -234,10 +240,10 @@
             label = "EXTRA";
             display-name = "EXTRA";
             bindings = <
-        &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
-        &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&trans  &lt 4 Z     &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 4 SLASH   &trans
-                                &lt 7 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 9 RET  &lt 8 BSPC   &lt 10 DEL
+            &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
+            &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
+&kp LSHIFT  &lt 4 Z     &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 4 SLASH   &kp RSHIFT
+                                    &lt 7 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 9 RET  &lt 8 BSPC   &lt 10 DEL
             >;
         };
 
